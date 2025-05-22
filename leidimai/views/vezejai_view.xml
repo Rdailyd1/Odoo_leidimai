@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="vezejai_tree_view">
+        <field name="name">vezejai.tree</field>
+        <field name="model">leidimai.vezejai</field>
+        <field name="arch" type="xml">
+            <tree string="Vezejai Tree">
+                <field name="carrier_name"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id=">vezejai_form_view">
+        <field name="name">vezejai.form</field>
+        <field name="model">leidimai.vezejai</field>
+        <field name="arch" type="xml">
+            <form string="Vezejai Form">
+                <sheet>
+                    <group>
+                        <field name="carrier_name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="vezejai_action">
+        <field name="name">Vežėjai</field>
+        <field name="res_model">leidimai.vezejai</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

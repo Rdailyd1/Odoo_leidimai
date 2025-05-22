@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="salis_tree_view">
+        <field name="name">salis.tree</field>
+        <field name="model">leidimai.salis</field>
+        <field name="arch" type="xml">
+            <tree string="Salis Tree">
+                <field name="country"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id=">salis_form_view">
+        <field name="name">salis.form</field>
+        <field name="model">leidimai.salis</field>
+        <field name="arch" type="xml">
+            <form string="Salis Form">
+                <sheet>
+                    <group>
+                        <field name="country"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="salis_action">
+        <field name="name">Šalis</field>
+        <field name="res_model">leidimai.salis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

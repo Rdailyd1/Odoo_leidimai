@@ -1,0 +1,92 @@
+<odoo>
+    <!-- Grupės apibrėžimai -->
+    <record id="leidimai_configuration_manager" model="res.groups">
+        <field name="name">Permissions Configuration Manager</field>
+        <field name="comment">The right to manage bus permissions</field>
+    </record>
+
+
+    <!--     Teisių apibrėžimai -->
+
+    <record id="leidimai_configuration_manager_access_leidimai_leidimai" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.leidimai</field>
+        <field name="model_id" ref="model_leidimai_leidimai"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_leidimaipartneris" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.leidimaipartneris</field>
+        <field name="model_id" ref="model_leidimai_leidimaipartneris"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_paraiskos" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.paraiskos</field>
+        <field name="model_id" ref="model_leidimai_paraiskos"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_salis" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.salis</field>
+        <field name="model_id" ref="model_leidimai_salis"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_vezejai" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.vezejai</field>
+        <field name="model_id" ref="model_leidimai_vezejai"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_marsrutas" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.marsrutas</field>
+        <field name="model_id" ref="model_leidimai_marsrutas"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_marsruto_nr" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.marsruto_nr</field>
+        <field name="model_id" ref="model_leidimai_marsruto_nr"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="leidimai_configuration_manager_access_leidimai_zvalguose" model="ir.model.access">
+        <field name="name">Permissions Configuration Manager Access to leidimai.zvalguose</field>
+        <field name="model_id" ref="model_leidimai_zvalguose"/>
+        <field name="group_id" ref="leidimai_configuration_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+</odoo>
+

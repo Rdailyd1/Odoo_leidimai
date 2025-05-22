@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="leidimai_tree_view">
+        <field name="name">leidimai.tree</field>
+        <field name="model">leidimai.leidimai</field>
+        <field name="arch" type="xml">
+            <tree default_order="id desc" string="Leidimai Tree">
+                <field name="vezejas_partneris"/>
+                <field name="route_no"/>
+                <field name="route"/>
+                <field name="departure"/>
+                <field name="number_of_permits"/>
+                <field name="country"/>
+                <field name="permit_no"/>
+                <field name="issued"/>
+                <field name="valid_until"/>
+                <field name="carrier_ids" widget="many2many_tags"/>
+                <field name="onbus"/>
+                <field name="sent_message90"/>
+                <field name="sent_message30"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="leidimai_form_view">
+        <field name="name">leidimai.form</field>
+        <field name="model">leidimai.leidimai</field>
+        <field name="arch" type="xml">
+            <form string="Leidimai Form">
+                <sheet>
+                    <group>
+                        <field name="vezejas_partneris"/>
+                        <field name="route_no"/>
+                        <field name="route"/>
+                        <field name="departure"/>
+                        <field name="number_of_permits"/>
+                        <field name="country"/>
+                        <field name="permit_no"/>
+                        <field name="issued"/>
+                        <field name="valid_until"/>
+                        <field name="carrier_ids" widget="many2many_tags"/>
+                        <field name="onbus"/>
+                        <field name="sent_message90"/>
+                        <field name="sent_message30"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="leidimai_action">
+        <field name="name">Leidimai</field>
+        <field name="res_model">leidimai.leidimai</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="main_projects_menu" name="Leidimai" action="leidimai_action"
+              web_icon="leidimai,static/src/img/leidimai.png"/>
+    <menuitem id="config_menu" name="Konfigūravimas"
+              parent="main_projects_menu" groups="leidimai.leidimai_configuration_manager"/>
+    <menuitem id="config_menu1" name="Leidimai" action="leidimai_action"
+              parent="main_projects_menu"/>
+    <menuitem id="config_menu2" name="Leidimai Partneris" action="leidimaipartneris_action"
+              parent="main_projects_menu"/>
+    <menuitem id="config_menu3" name="Paraiškos" action="paraiskos_action"
+              parent="main_projects_menu"/>
+    <menuitem id="config_menu4" name="Šalis" action="salis_action"
+              parent="config_menu"/>
+    <menuitem id="config_menu5" name="Vežėjai" action="vezejai_action"
+              parent="config_menu"/>
+    <menuitem id="config_menu6" name="Maršruto Nr." action="marsruto_nr_action"
+              parent="config_menu"/>
+    <menuitem id="config_menu7" name="Maršrutas" action="marsrutas_action"
+              parent="config_menu"/>
+    <menuitem id="config_menu8" name="Žvalguose" action="zvalguose_action"
+              parent="main_projects_menu"/>
+</odoo>
+

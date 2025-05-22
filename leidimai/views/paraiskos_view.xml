@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="paraiskos_tree_view">
+        <field name="name">leidimaipartneris.tree</field>
+        <field name="model">leidimai.paraiskos</field>
+        <field name="arch" type="xml">
+            <tree default_order="id desc" string="Paraiskos Tree">
+                <field name="code"/>
+                <field name="route_name"/>
+                <field name="departure_vilnius"/>
+                <field name="departure_end"/>
+                <field name="partner_ids" widget="many2many_tags"/>
+                <field name="delivered"/>
+                <field name="eleven_eur"/>
+                <field name="two_ninty"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="paraiskos_form_view">
+        <field name="name">Paraiskos.form</field>
+        <field name="model">leidimai.paraiskos</field>
+        <field name="arch" type="xml">
+            <form string="Paraiskos Form">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="route_name"/>
+                        <field name="departure_vilnius"/>
+                        <field name="departure_end"/>
+                        <field name="partner_ids" widget="many2many_tags"/>
+                        <field name="delivered"/>
+                        <field name="eleven_eur"/>
+                        <field name="two_ninty"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="paraiskos_action">
+        <field name="name">Paraiškos</field>
+        <field name="res_model">leidimai.paraiskos</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
+

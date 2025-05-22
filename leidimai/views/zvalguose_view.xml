@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="zvalguose_tree_view">
+        <field name="name">zvalguose.tree</field>
+        <field name="model">leidimai.zvalguose</field>
+        <field name="arch" type="xml">
+            <tree default_order="id desc" string="Zvalguose Tree">
+                <field name="route_no"/>
+                <field name="route_name"/>
+                <field name="country"/>
+                <field name="permit_no"/>
+                <field name="issued"/>
+                <field name="valid_until"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="zvalguose_form_view">
+        <field name="name">Zvalguose.form</field>
+        <field name="model">leidimai.zvalguose</field>
+        <field name="arch" type="xml">
+            <form string="Zvalguose Form">
+                <sheet>
+                    <group>
+                        <field name="route_no"/>
+                        <field name="route_name"/>
+                        <field name="country"/>
+                        <field name="permit_no"/>
+                        <field name="issued"/>
+                        <field name="valid_until"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="zvalguose_action">
+        <field name="name">Žvalguose</field>
+        <field name="res_model">leidimai.zvalguose</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

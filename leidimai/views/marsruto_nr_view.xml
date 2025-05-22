@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="marsruto_nr_tree_view">
+        <field name="name">marsruto_nr.tree</field>
+        <field name="model">leidimai.marsruto_nr</field>
+        <field name="arch" type="xml">
+            <tree string="Marsruto Nr Tree">
+                <field name="route_no"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id=">marsruto_nr_form_view">
+        <field name="name">marsruto_nr.form</field>
+        <field name="model">leidimai.marsruto_nr</field>
+        <field name="arch" type="xml">
+            <form string="Marsruto Nr Form">
+                <sheet>
+                    <group>
+                        <field name="route_no"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="marsruto_nr_action">
+        <field name="name">Maršruto Nr.</field>
+        <field name="res_model">leidimai.marsruto_nr</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

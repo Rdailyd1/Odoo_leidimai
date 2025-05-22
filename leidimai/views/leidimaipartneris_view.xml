@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="leidimaipartneris_tree_view">
+        <field name="name">leidimaipartneris.tree</field>
+        <field name="model">leidimai.leidimaipartneris</field>
+        <field name="arch" type="xml">
+            <tree default_order="id desc" string="Leidimaipartneris Tree">
+                <field name="route_no"/>
+                <field name="route"/>
+                <field name="departure"/>
+                <field name="number_of_permits"/>
+                <field name="country"/>
+                <field name="permit_no"/>
+                <field name="issued"/>
+                <field name="valid_until"/>
+                <field name="carrier_ids" widget="many2many_tags"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="leidimaipartneris_form_view">
+        <field name="name">leidimaipartneris.form</field>
+        <field name="model">leidimai.leidimaipartneris</field>
+        <field name="arch" type="xml">
+            <form string="Leidimaipartneris Form">
+                <sheet>
+                    <group>
+                        <field name="route_no"/>
+                        <field name="route"/>
+                        <field name="departure"/>
+                        <field name="number_of_permits"/>
+                        <field name="country"/>
+                        <field name="permit_no"/>
+                        <field name="issued"/>
+                        <field name="valid_until"/>
+                        <field name="carrier_ids" widget="many2many_tags"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="leidimaipartneris_action">
+        <field name="name">Leidimai Partneris</field>
+        <field name="res_model">leidimai.leidimaipartneris</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
+
